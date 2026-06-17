@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Adharsh Dubey | Interactive Resume</title>
+  <meta name="description" content="Resume of Adharsh Dubey, 4th Year B.Tech Computer Science student at VIT Bhopal University specializing in AI & ML.">
+  <meta name="keywords" content="Resume, Adharsh Dubey, VIT Bhopal, AI & ML Student, Computer Science, Python, Machine Learning">
+  <meta name="author" content="Adharsh Dubey">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body class="dark-theme">
+  <!-- Dynamic Backdrop Glow Effects & Interactive Neural Canvas -->
+  <div class="glow-bg">
+    <canvas id="neural-canvas"></canvas>
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+  </div>
+
+  <!-- Top Utilities Bar -->
+  <header class="utility-bar">
+    <div class="utility-container" style="justify-content: flex-end;">
+      <div class="utility-controls">
+        <button id="theme-toggle" class="utility-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="resume.html" target="_blank" class="utility-btn primary-btn" style="text-decoration: none;" aria-label="View Resume">
+          <i class="fa-solid fa-file-pdf"></i> View Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Systematic Resume Layout -->
+  <main class="resume-container">
+    
+    <!-- LEFT SIDEBAR COLUMN (Profile, Contacts, Skills, Extracurriculars) -->
+    <aside class="resume-left-col">
+      <!-- Profile Information Card -->
+      <div class="profile-card">
+        <div class="profile-image-container">
+          <img id="profile-avatar" src="" alt="Adharsh Dubey" class="profile-avatar">
+        </div>
+        <h1 id="name">Adharsh Dubey</h1>
+        <p id="tagline" class="tagline">B.Tech Student</p>
+        <p id="specialization" class="specialization-tag">AI & ML Specialization</p>
+        <p class="university-tag">VIT Bhopal University</p>
+      </div>
+
+      <!-- Contact Stack Section -->
+      <div class="left-section" id="contact-section">
+        <h3 class="left-title">Contact</h3>
+        <div class="contact-stack">
+          <a id="email" href="" class="contact-item"><i class="fa-solid fa-envelope"></i> <span id="email-text"></span></a>
+          <div class="contact-item"><i class="fa-solid fa-location-dot"></i> <span id="location"></span></div>
+          <a id="linkedin" href="" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span></a>
+          <a id="github" href="" target="_blank" class="contact-item"><i class="fa-brands fa-github"></i> <span>GitHub</span></a>
+        </div>
+      </div>
+
+      <!-- Skills Matrix Section -->
+      <div class="left-section" id="skills-section">
+        <h3 class="left-title">Skills</h3>
+        <div class="skills-list" id="skills-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+
+      <!-- Extracurricular Section -->
+      <div class="left-section" id="extracurricular-section">
+        <h3 class="left-title">Extracurricular</h3>
+        <p id="extracurricular" class="left-text"></p>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT COLUMN (Objective, Education, Experience, Certifications) -->
+    <div class="resume-right-col">
+      <!-- Career Objective Section -->
+      <section class="resume-section" id="objective-section">
+        <h2 class="right-title">Career Objective</h2>
+        <div class="right-card">
+          <p id="objective" class="objective-text"></p>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="resume-section" id="education-section">
+        <h2 class="right-title">Education</h2>
+        <div id="education-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+
+      <!-- Work Experience Section -->
+      <section class="resume-section" id="experience-section">
+        <h2 class="right-title">Work Experience</h2>
+        <div id="experience-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="resume-section" id="projects-section">
+        <h2 class="right-title">Projects</h2>
+        <div id="projects-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+
+      <!-- Trainings / Certifications Section -->
+      <section class="resume-section" id="certifications-section">
+        <h2 class="right-title">Trainings & Certifications</h2>
+        <div id="certification-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+
+  <footer class="resume-footer no-print">
+    <p class="hosting-note">Hosted securely on GitHub Pages.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="resume-data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
