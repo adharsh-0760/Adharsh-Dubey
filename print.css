@@ -1,0 +1,295 @@
+/* ==========================================================
+   INTERACTIVE RESUME - PRINT STYLESHEET (A4 OPTIMIZED)
+   ========================================================== */
+
+@media print {
+  /* --- Reset Page Styles --- */
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10pt !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.5cm;
+  }
+
+  /* --- Hide Non-Print Elements --- */
+  .glow-bg,
+  .utility-bar,
+  .no-print,
+  #theme-toggle,
+  #print-pdf,
+  .profile-image-container {
+    display: none !important;
+  }
+
+  /* --- Resume Container Layout (Stack vertically on paper) --- */
+  .resume-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .resume-left-col,
+  .resume-right-col {
+    display: block !important;
+    width: 100% !important;
+    position: static !important;
+  }
+
+  /* --- Profile Card (Transforms to clean Header) --- */
+  .profile-card {
+    background: none !important;
+    border: none !important;
+    border-bottom: 2px solid #333333 !important;
+    padding: 0 0 0.5rem 0 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    display: block !important;
+  }
+
+  .profile-card h1 {
+    font-size: 22pt !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+    margin-bottom: 2px !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+  }
+
+  .profile-card .tagline {
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    color: #333333 !important;
+    margin-bottom: 1px !important;
+  }
+
+  .profile-card .specialization-tag {
+    font-size: 9.5pt !important;
+    color: #555555 !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .profile-card .university-tag {
+    font-size: 9.5pt !important;
+    color: #555555 !important;
+    margin-top: 1px !important;
+  }
+
+  /* --- Contact Stack (Convert to single row) --- */
+  .left-section:has(.contact-stack) {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    margin-top: -0.75rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .left-section:has(.contact-stack) .left-title {
+    display: none !important; /* Hide contact header */
+  }
+
+  .contact-stack {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 4px 14px !important;
+    font-size: 8.5pt !important;
+  }
+
+  .contact-stack .contact-item {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #333333 !important;
+    font-size: 8.5pt !important;
+  }
+
+  .contact-stack .contact-item i {
+    color: #000000 !important;
+    margin-right: 2px !important;
+  }
+
+  .contact-stack a.contact-item {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+
+  /* --- Standard Sections --- */
+  .left-section,
+  .resume-section {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid !important;
+    display: grid !important;
+    grid-template-columns: 130px 1fr !important; /* Elegant margin-section */
+    gap: 15px !important;
+  }
+
+  .left-title,
+  .right-title {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    border-left: 2px solid #333333 !important;
+    padding-left: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 0 !important;
+    margin-top: 2px !important;
+  }
+
+  .left-text,
+  .right-card,
+  .skills-list {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    color: #111111 !important;
+  }
+
+  .objective-text,
+  .left-text {
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* --- Blocks (Education / Experience) --- */
+  .content-block {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+  }
+
+  .content-block::before {
+    display: none !important;
+  }
+
+  .content-block:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .block-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    margin-bottom: 1px !important;
+  }
+
+  .block-title {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+  }
+
+  .block-subtitle {
+    font-size: 9.5pt !important;
+    font-weight: 600 !important;
+    color: #222222 !important;
+  }
+
+  .block-period {
+    font-size: 8.5pt !important;
+    color: #555555 !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .block-desc {
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+    color: #333333 !important;
+  }
+
+  /* --- Certification Card --- */
+  .cert-block {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .cert-block:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .cert-block::before {
+    display: none !important;
+  }
+
+  .cert-info h3 {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+  }
+
+  .cert-info p {
+    font-size: 8.5pt !important;
+    color: #555555 !important;
+  }
+
+  .cert-btn {
+    display: none !important;
+  }
+
+  /* --- Skills Layout (Grouped) --- */
+  .skills-group {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .skills-group:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .skills-group-title {
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+    color: #333333 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 3px !important;
+    display: block !important;
+    letter-spacing: 0.5px !important;
+  }
+  
+  .skills-chips-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .skill-chip {
+    background: none !important;
+    border: 1px solid #999999 !important;
+    color: #000000 !important;
+    padding: 2px 6px !important;
+    font-size: 8.5pt !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+  }
+}
